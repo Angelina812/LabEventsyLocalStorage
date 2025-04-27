@@ -6,8 +6,8 @@ const borrarTodoBtn = document.querySelector("#boton-borrar-todo");
 
 // evita que se eliminen las tareas al recargar la pagina
 document.addEventListener("DOMContentLoaded", function () {
-  const tareasGuardadas = JSON.parse(localStorage.getItem("text")) || [];
-  tareasGuardadas.forEach(function (tarea) {
+  const tareasGuardadas = JSON.parse(localStorage.getItem("text")) || [];  //los || [] son necesarios para trabajar con un arreglo vacio
+  tareasGuardadas.forEach(function (tarea) {  //foreach  recorrer arreglos sin necesidad de controlar índices manualmente (i)
     crearTarea(tarea);
   });
 });
